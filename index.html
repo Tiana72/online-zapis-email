@@ -1,5 +1,5 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xmlns:o="urn:schemas-microsoft-com:office:office" style="font-family:arial, 'helvetica neue', helvetica, sans-serif"> 
+<html xmlns="http://www.w3.org/1999/xhtml" style="font-family: arial, 'Open Sans', sans-serif"> 
   <head> 
     <meta http-equiv="Content-Type" content="text/html charset=UTF-8" />
     <meta content="width=device-width, initial-scale=1" name="viewport"> 
@@ -7,12 +7,37 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
     <meta content="telephone=no" name="format-detection"> 
     <title>Online-zapis</title>
+  <style type="text/css">
+    body {
+			width: 100% !important;
+			-webkit-text-size-adjust: 100%;
+			-ms-text-size-adjust: 100%;
+			margin: 0;
+			padding: 0;
+			line-height: 100%;
+		}
 
-  </head> 
+		[style*="Open Sans"] {font-family: arial, 'Open Sans', sans-serif !important;}
 
-<body style="width: 100%; font-family: arial, sans-serif; padding: 0; margin: 0; background-color: #ffffff"> 
-  <style>
-    table {border-collapse:separate;}
+		img {
+			outline: none;
+			text-decoration: none;
+			border:none;
+			-ms-interpolation-mode: bicubic;
+			max-width: 100%!important;
+			margin: 0;
+			padding: 0;
+		}
+    
+		table td {
+			border-collapse: collapse;
+		}
+    
+		table {
+			border-collapse: collapse;
+			mso-table-lspace: 0pt;
+			mso-table-rspace: 0pt;
+		}
     a, a:link, a:visited {text-decoration: none; color: #ffffff;}
     a:hover {text-decoration: underline;}
     h2,h2 a,h2 a:visited,h3,h3 a,h3 a:visited,h4,h5,h6,.t_cht {color:#2a3042;}
@@ -22,6 +47,7 @@
     .action {
       color: #2a3042;
       border:#2a3042 1px solid; 
+      font-size: 24px; 
     }
     .reschedule {
       color: #e89d0d;
@@ -35,30 +61,83 @@
       color: #34c38f;
       border:#34c38f 1px solid; 
     }
-  </style>
+    .phone {
+      font-size: 16px;
+    }
+    .company-name {
+      font-size: 32px;
+    }
+    .company-name span {
+      font-size: 20px;
+    }
+    .company-name a {
+      font-size: 13px;
+    }
+    .date-time {
+      font-size: 24px;
+    }
+    .sumary, .politics {
+      font-size: 24px;
+    }
+    .info {
+      font-size: 20px;
+    }
 
+    @media only screen and (max-width:480px) {
+      .phone {
+        font-size: 13px;
+      }
+      .company-name {
+        font-size: 24px;
+      }
+      .company-name span {
+        font-size: 16px;
+      }
+      .company-name a {
+        font-size: 13px;
+      }
+      .action {
+        font-size: 18px; 
+      }
+      .date-time {
+        font-size: 18px;
+      }
+      .sumary, .politics {
+        font-size: 18px;
+      }
+      .info {
+        font-size: 16px;
+      }
+      .info span {
+        display: none;
+      }
 
+    }
+    </style>
+  </head> 
+
+<body style="width: 100%; font-family: arial, sans-serif; padding: 0; margin: 0; background-color: #ffffff"> 
         <table cellspacing="0" cellpadding="0" align="center" style="border-collapse: collapse; border-spacing: 0px; table-layout: fixed; width: 100%; background-color: transparent;"> 
           <tr> 
             <td align="center" style="padding: 0; margin:0"> 
 
               <!-- Main table -->
-              <table cellspacing="0" cellpadding="0" align="center" style="border-collapse: collapse; border-spacing: 0px; background-color: #f2f2f7; width: 600px"> 
+              <table cellspacing="0" cellpadding="0" align="center" style="border-collapse: collapse; border-spacing: 0px; background-color: #f2f2f7; max-width: 600px"> 
 
                 <!-- Company -->
                 <tr> 
                   <td align="left" bgcolor="#2A3042" style="margin:0; padding-top: 30px; padding-left: 30px; padding-right: 28px; padding-bottom: 32px; background-color:#2a3042; border-bottom-right-radius: 50px; border-bottom-left-radius: 50px;">
                     <table cellspacing="0" cellpadding="0" align="left" style="border-collapse: collapse; border-spacing: 0px; width: 100%;"> 
                       <tr> 
-                        <td valign="top" align="left" style="padding: 0; margin: 0; width: 68%"> 
-                          <p style="margin: 0; -webkit-text-size-adjust: none; -ms-text-size-adjust: none; font-family: arial, sans-serif; line-height: 32px; color: #ffffff; font-size:32px"><b>Dark Eagle<br> Barbershop</b><br>
-                          <span style="font-size: 20px; line-height: 27px; display: block; margin-top: 5px;">Речицкий проспект 5А</span>
-                          <span style="font-size: 13px; line-height: 18px; display: block; margin-top: 6px;"><a style="color: #ffffff; text-decoration: none;" href="#"><img src="img/world.svg" style="margin-right: 5px;" alt="call">Посмотреть на карте</a></span>
+                        <td valign="top" align="left" style="padding: 0; margin: 0; width: 60%"> 
+                          <p class="company-name" style="margin: 0; -webkit-text-size-adjust: none; -ms-text-size-adjust: none; font-family: arial, sans-serif; line-height: 32px; color: #ffffff; "><b>Dark Eagle<br> Barbershop</b><br>
+                          <span style="line-height: 27px; display: block; margin-top: 5px;">Речицкий проспект 5А</span>
+                          <span style="line-height: 18px; display: block; margin-top: 6px;"><a style="color: #ffffff; text-decoration: none;" href="#"><img src="img/world.svg" style="margin-right: 5px;" alt="call">Посмотреть на карте</a></span>
                           </p>
                         </td> 
-                        <td align="center" style="padding: 0; margin: 0; font-size: 0px; width: 4%;"></td> 
-                        <td valign="top" align="right" style="padding: 0; margin: 0; width: 28%;">
-                          <p style="margin:0; -webkit-text-size-adjust: none; -ms-text-size-adjust: none; font-family:arial, sans-serif; line-height: 22px; color:#ffffff; font-size: 16px">
+                        <td align="center" style="padding: 0; margin: 0; font-size: 0px; width: 2%;"></td> 
+                        <td valign="top" align="right" style="padding: 0; margin: 0; width: 38%;">
+                          <p class="phone" style="margin:0; -webkit-text-size-adjust: none; -ms-text-size-adjust: none; font-family:arial, sans-serif; line-height: 22px; color:#ffffff;">
                             <a style="color: #ffffff; text-decoration: none;" href="tel:+375290000000"><img src="img/phone-call.svg" alt="call">&nbsp;+375 29 0000000<br></a>
                             <a style="color: #ffffff; text-decoration: none;" href="tel:+375290000000"><img src="img/phone-call.svg" alt="call">&nbsp;+375 29 0000000</a>
                           </p>
@@ -75,12 +154,12 @@
                     <table cellspacing="0" cellpadding="0" align="left" style="border-collapse: collapse; border-spacing: 0px; margin-top: 25px; display: block;"> 
                       <tr>
                         <td valign="top">
-                          <p class="action reschedule" style="margin: 0; padding-left: 10px; padding-right: 10px; padding-top: 5px; padding-bottom: 5px; font-size: 24px; line-height: 33px; border-radius: 5px; "> Напоминание о записи </p>
+                          <p class="action reschedule" style="margin: 0; padding-left: 10px; padding-right: 10px; padding-top: 5px; padding-bottom: 5px; line-height: 33px; border-radius: 5px; "> Напоминание о записи </p>
                         </td>
                       </tr>  
                       <tr>
                         <td>
-                          <p class="date-time" style="display: block; font-size: 24px; line-height: 33px; color: #8e919d; padding-top: 5px; padding-bottom: 25px; margin: 0; ">Пятница, 25 марта, 14:30</p>
+                          <p class="date-time" style="display: block; line-height: 33px; color: #8e919d; padding-top: 5px; padding-bottom: 25px; margin: 0; ">Пятница, 25 марта, 14:30</p>
                         </td>
                       </tr>
                     </table> 
@@ -109,37 +188,37 @@
                     <table cellspacing="0" cellpadding="0" align="left" style="border-collapse: collapse; border-spacing: 0px; width: 100%;"> 
                       <tr> 
                         <td valign="top" align="left" style="padding: 0; margin: 0; width: 70%; font-size: 16px; line-height: 24px; color: #666b79; padding-top: 30px;"> 
-                          <ul style="list-style-position: outside; margin: 0;"><li>Окрашивание волос (короткие)</li></ul>
+                          <ul style="list-style-position: outside; margin: 0; padding-left: 20px;"><li>Окрашивание волос (короткие)</li></ul>
                         </td> 
-                        <td align="center" style="padding: 0; margin: 0; font-size: 0px; width: 4%;"></td> 
-                        <td valign="bottom" align="right" style="padding: 0; margin: 0; width: 26%; font-size: 13px; line-height: 24px; color: #2a3042; font-weight: bold; padding-top: 30px;">
+                        <td align="center" style="padding: 0; margin: 0; font-size: 0px; width: 2%;"></td> 
+                        <td valign="bottom" align="right" style="padding: 0; margin: 0; width: 28%; font-size: 13px; line-height: 24px; color: #2a3042; font-weight: bold; padding-top: 30px;">
                           <ul style="margin: 0;"><li style="list-style: none;">32.32 BYN</li></ul>
                         </td>                 
                       </tr> 
                       <tr> 
                         <td valign="top" align="left" style="padding: 0; margin: 0; width: 70%; font-size: 16px; line-height: 24px; color: #666b79;"> 
-                          <ul style="list-style-position: outside; margin: 0"><li>Стрижка мужская модельная</li></ul>
+                          <ul style="list-style-position: outside; margin: 0; padding-left: 20px;"><li>Стрижка мужская модельная</li></ul>
                         </td> 
-                        <td align="center" style="padding: 0; margin: 0; font-size: 0px; width: 4%;"></td> 
-                        <td valign="bottom" align="right" style="padding: 0; margin: 0; width: 26%; font-size: 13px; line-height: 24px; color: #2a3042; font-weight: bold;">
+                        <td align="center" style="padding: 0; margin: 0; font-size: 0px; width: 2%;"></td> 
+                        <td valign="bottom" align="right" style="padding: 0; margin: 0; width: 28%; font-size: 13px; line-height: 24px; color: #2a3042; font-weight: bold;">
                           <ul style="margin: 0;"><li style="list-style: none;">32.32 BYN</li></ul>
                         </td>                 
                       </tr> 
                       <tr> 
                         <td valign="top" align="left" style="padding: 0; margin: 0; width: 70%; font-size: 16px; line-height: 24px; color: #666b79;"> 
-                          <ul style="list-style-position: outside; margin: 0"><li>Окрашивание волос (короткие)</li></ul>
+                          <ul style="list-style-position: outside; margin: 0; padding-left: 20px;"><li>Окрашивание волос (короткие)</li></ul>
                         </td> 
-                        <td align="center" style="padding: 0; margin: 0; font-size: 0px; width: 4%;"></td> 
-                        <td valign="bottom" align="right" style="padding: 0; margin: 0; width: 26%; font-size: 13px; line-height: 24px; color: #2a3042; font-weight: bold;">
+                        <td align="center" style="padding: 0; margin: 0; font-size: 0px; width: 2%;"></td> 
+                        <td valign="bottom" align="right" style="padding: 0; margin: 0; width: 28%; font-size: 13px; line-height: 24px; color: #2a3042; font-weight: bold;">
                           <ul style="margin: 0;"><li style="list-style: none;">32.32 BYN</li></ul>
                         </td>                 
                       </tr> 
                       <tr> 
                         <td valign="top" align="left" style="padding: 0; margin: 0; width: 70%; font-size: 16px; line-height: 24px; color: #666b79; padding-bottom: 22px;"> 
-                          <ul style="list-style-position: outside; margin: 0"><li>Окрашивание волос очень длинное название (короткие)</li></ul>
+                          <ul style="list-style-position: outside; margin: 0; padding-left: 20px;"><li>Окрашивание волос очень длинное название (короткие)</li></ul>
                         </td> 
-                        <td align="center" style="padding: 0; margin: 0; font-size: 0px; width: 4%;"></td> 
-                        <td valign="bottom" align="right" style="padding: 0; margin: 0; width: 26%; font-size: 13px; line-height: 24px; color: #2a3042; font-weight: bold; padding-bottom: 22px;">
+                        <td align="center" style="padding: 0; margin: 0; font-size: 0px; width: 2%;"></td> 
+                        <td valign="bottom" align="right" style="padding: 0; margin: 0; width: 28%; font-size: 13px; line-height: 24px; color: #2a3042; font-weight: bold; padding-bottom: 22px;">
                           <ul style="margin: 0;"><li style="list-style: none;">232.32 BYN</li></ul>
                           
                         </td>                 
@@ -155,10 +234,10 @@
                     <table cellspacing="0" cellpadding="0" align="left" style="width: 100%; border-collapse: collapse; border-spacing: 0px; border-top: 1px solid #dedfe6; border-bottom: 1px solid #dedfe6;">
                       <tr>
                         <td style="padding-top: 30px; padding-bottom: 30px;">
-                          <p style="margin: 0; color: #2a3042; font-size: 20px; line-height: 27px; font-weight: bold; font-size: 24px; line-height: 40px;" >Итого:</p>
+                          <p class="summary" style="margin: 0; color: #2a3042; font-size: 20px; line-height: 27px; font-weight: bold; line-height: 40px;" >Итого:</p>
                         </td>
                         <td align="right" style="padding-top: 30px; padding-bottom: 30px;">
-                          <p style="margin: 0; color: #2a3042; font-size: 20px; line-height: 27px; font-weight: bold; font-size: 24px; line-height: 40px;" >320.24 BYN</p>
+                          <p class="summary" style="margin: 0; color: #2a3042; font-size: 20px; line-height: 27px; font-weight: bold; line-height: 40px;" >320.24 BYN</p>
                         </td>
                       </tr>
                     </table>
@@ -172,7 +251,7 @@
                     <table cellspacing="0" cellpadding="0" align="left" style="width: 100%; border-collapse: collapse; border-spacing: 0px; ">
                       <tr>
                         <td style="padding-top: 30px; padding-bottom: 30px;">
-                          <p style="margin: 0; color: #2a3042; font-weight: bold; font-size: 24px; line-height: 33px;" >Политика отмены визита:</p>
+                          <p class="politics" style="margin: 0; color: #2a3042; font-weight: bold; line-height: 33px;" >Политика отмены визита:</p>
                           <p style="margin: 0; color: #666b79; font-size: 14px; line-height: 19px; margin-top: 5px;" >Отмена записи возможна не познее, чем 12 часов.</p>
                         </td>
                       </tr>
@@ -187,7 +266,7 @@
                     <table cellspacing="0" cellpadding="0" align="left" style="width: 100%; border-collapse: collapse; border-spacing: 0px; background-color: #2a3042">
                       <tr>
                         <td style="padding-top: 21px; padding-bottom: 17px;">
-                          <p style="text-align: center; margin: 0; color: #ffffff; font-size: 20px; line-height: 27px; font-weight: bold;" >Информация о визите &nbsp; <span><img src="img/arrow.svg" alt="arrow"></span></p>
+                          <a href="https://online-zapis.com" target="_blank" style="text-decoration: none;" ><p class="info" style="text-align: center; margin: 0; color: #ffffff; line-height: 27px; font-weight: bold;" >Информация о визите &nbsp; <span><img src="img/arrow.svg" alt="arrow" ></span></p></a>
                         </td>
                       </tr>
                     </table>
