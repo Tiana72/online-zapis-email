@@ -76,7 +76,7 @@
     .date-time {
       font-size: 24px;
     }
-    .sumary, .politics {
+    .summary, .politics {
       font-size: 24px;
     }
     .info {
@@ -102,7 +102,7 @@
       .date-time {
         font-size: 18px;
       }
-      .sumary, .politics {
+      .summary, .politics {
         font-size: 18px;
       }
       .info {
@@ -130,16 +130,16 @@
                     <table cellspacing="0" cellpadding="0" align="left" style="border-collapse: collapse; border-spacing: 0px; width: 100%;"> 
                       <tr> 
                         <td valign="top" align="left" style="padding: 0; margin: 0; width: 60%"> 
-                          <p class="company-name" style="margin: 0; -webkit-text-size-adjust: none; -ms-text-size-adjust: none; font-family: arial, sans-serif; line-height: 32px; color: #ffffff; "><b>Dark Eagle<br> Barbershop</b><br>
-                          <span style="line-height: 27px; display: block; margin-top: 5px;">Речицкий проспект 5А</span>
-                          <span style="line-height: 18px; display: block; margin-top: 6px;"><a style="color: #ffffff; text-decoration: none;" href="#"><img src="img/world.svg" style="margin-right: 5px;" alt="call">Посмотреть на карте</a></span>
+                          <p class="company-name" style="margin: 0; -webkit-text-size-adjust: none; -ms-text-size-adjust: none; font-family: arial, sans-serif; line-height: 32px; font-size: 32px; color: #ffffff; "><b>Dark Eagle Barbershop</b><br>
+                          <span style="line-height: 27px; font-size: 20px; display: block; margin-top: 5px;">Речицкий проспект 5А</span>
+                          <span style="line-height: 18px; display: block; margin-top: 6px;"><a style="color: #ffffff; text-decoration: none; font-size: 13px;" href="#"><img src="img/world.svg" width="12" height="12" style="margin-right: 5px;" alt="call">Посмотреть на карте</a></span>
                           </p>
                         </td> 
                         <td align="center" style="padding: 0; margin: 0; font-size: 0px; width: 2%;"></td> 
                         <td valign="top" align="right" style="padding: 0; margin: 0; width: 38%;">
-                          <p class="phone" style="margin:0; -webkit-text-size-adjust: none; -ms-text-size-adjust: none; font-family:arial, sans-serif; line-height: 22px; color:#ffffff;">
-                            <a style="color: #ffffff; text-decoration: none;" href="tel:+375290000000"><img src="img/phone-call.svg" alt="call">&nbsp;+375 29 0000000<br></a>
-                            <a style="color: #ffffff; text-decoration: none;" href="tel:+375290000000"><img src="img/phone-call.svg" alt="call">&nbsp;+375 29 0000000</a>
+                          <p class="phone" style="margin:0; -webkit-text-size-adjust: none; -ms-text-size-adjust: none; font-family:arial, sans-serif; line-height: 22px; font-size: 16px; color:#ffffff;">
+                            <a style="color: #ffffff; text-decoration: none;" href="tel:+375290000000"><img width="12" height="12" src="img/phone-call.svg" alt="call">&nbsp;+375 29 0000000<br></a>
+                            <a style="color: #ffffff; text-decoration: none;" href="tel:+375290000000"><img width="12" height="12" src="img/phone-call.svg" alt="call">&nbsp;+375 29 0000000</a>
                           </p>
                         </td>                 
                       </tr> 
@@ -154,12 +154,12 @@
                     <table cellspacing="0" cellpadding="0" align="left" style="border-collapse: collapse; border-spacing: 0px; margin-top: 25px; display: block;"> 
                       <tr>
                         <td valign="top">
-                          <p class="action reschedule" style="margin: 0; padding-left: 10px; padding-right: 10px; padding-top: 5px; padding-bottom: 5px; line-height: 33px; border-radius: 5px; "> Напоминание о записи </p>
+                          <p class="action reschedule" style="margin: 0; padding-left: 10px; padding-right: 10px; padding-top: 5px; padding-bottom: 5px; line-height: 33px; font-size: 24px; border-radius: 5px; "> Напоминание о записи </p>
                         </td>
                       </tr>  
                       <tr>
                         <td>
-                          <p class="date-time" style="display: block; line-height: 33px; color: #8e919d; padding-top: 5px; padding-bottom: 25px; margin: 0; ">Пятница, 25 марта, 14:30</p>
+                          <p class="date-time" style="display: block; line-height: 33px; font-size: 24px; color: #8e919d; padding-top: 5px; padding-bottom: 25px; margin: 0; ">Пятница, 25 марта, 14:30</p>
                         </td>
                       </tr>
                     </table> 
@@ -173,8 +173,11 @@
                     <table cellspacing="0" cellpadding="0" align="left" style="width: 100%; border-collapse: collapse; border-spacing: 0px;  border-top: 1px solid #dedfe6; border-bottom: 1px solid #dedfe6;">
                       <tr>
                         <td style="padding-top: 20px; padding-bottom: 20px; display: flex; align-items: center;">
-                          <img src="img/foto.png" width="70" height="70" alt="Client's photo" style="border-radius: 50%; margin-right: 30px;">
-                          <p style="margin: 0; color: #2a3042; font-size: 20px; line-height: 27px;" >Екатерина Светлая</p>
+                          <img src="img/foto.png" width="70" height="70" alt="Stuff's photo" style="border-radius: 50%; margin-right: 30px;"> <!-- Image from the database -->
+                          <div>
+                            <p style="margin: 0; color: #2a3042; font-size: 20px; line-height: 27px; display: block;" >Екатерина</p> <!-- Name from the database -->
+                            <p style="margin: 0; color: #2a3042; font-size: 20px; line-height: 27px; display: block;" >Светлая</p> <!-- Family name from the database -->
+                          </div>
                         </td>
                       </tr>
                     </table>
@@ -234,10 +237,10 @@
                     <table cellspacing="0" cellpadding="0" align="left" style="width: 100%; border-collapse: collapse; border-spacing: 0px; border-top: 1px solid #dedfe6; border-bottom: 1px solid #dedfe6;">
                       <tr>
                         <td style="padding-top: 30px; padding-bottom: 30px;">
-                          <p class="summary" style="margin: 0; color: #2a3042; font-size: 20px; line-height: 27px; font-weight: bold; line-height: 40px;" >Итого:</p>
+                          <p class="summary" style="margin: 0; color: #2a3042; font-size: 24px; line-height: 40px; font-weight: bold; " >Итого:</p>
                         </td>
                         <td align="right" style="padding-top: 30px; padding-bottom: 30px;">
-                          <p class="summary" style="margin: 0; color: #2a3042; font-size: 20px; line-height: 27px; font-weight: bold; line-height: 40px;" >320.24 BYN</p>
+                          <p class="summary" style="margin: 0; color: #2a3042; font-size: 24px; line-height: 40px; font-weight: bold; " >320.24 BYN</p>
                         </td>
                       </tr>
                     </table>
@@ -251,7 +254,7 @@
                     <table cellspacing="0" cellpadding="0" align="left" style="width: 100%; border-collapse: collapse; border-spacing: 0px; ">
                       <tr>
                         <td style="padding-top: 30px; padding-bottom: 30px;">
-                          <p class="politics" style="margin: 0; color: #2a3042; font-weight: bold; line-height: 33px;" >Политика отмены визита:</p>
+                          <p class="politics" style="margin: 0; color: #2a3042; font-weight: bold; line-height: 33px; font-size: 24px;" >Политика отмены визита:</p>
                           <p style="margin: 0; color: #666b79; font-size: 14px; line-height: 19px; margin-top: 5px;" >Отмена записи возможна не познее, чем 12 часов.</p>
                         </td>
                       </tr>
@@ -266,7 +269,7 @@
                     <table cellspacing="0" cellpadding="0" align="left" style="width: 100%; border-collapse: collapse; border-spacing: 0px; background-color: #2a3042">
                       <tr>
                         <td style="padding-top: 21px; padding-bottom: 17px;">
-                          <a href="https://online-zapis.com" target="_blank" style="text-decoration: none;" ><p class="info" style="text-align: center; margin: 0; color: #ffffff; line-height: 27px; font-weight: bold;" >Информация о визите &nbsp; <span><img src="img/arrow.svg" alt="arrow" ></span></p></a>
+                          <a href="https://online-zapis.com" target="_blank" style="text-decoration: none;" ><p class="info" style="text-align: center; margin: 0; color: #ffffff; line-height: 27px; font-size: 20px; font-weight: bold;" >Информация о визите &nbsp; <span><img src="img/arrow.svg" width="31" height="15" alt="arrow" ></span></p></a>
                         </td>
                       </tr>
                     </table>
