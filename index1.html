@@ -1,0 +1,307 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" style="font-family: arial, 'Open Sans', sans-serif"> 
+  <head> 
+    <meta http-equiv="Content-Type" content="text/html charset=UTF-8" />
+    <meta content="width=device-width, initial-scale=1" name="viewport"> 
+    <meta name="x-apple-disable-message-reformatting"> 
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+    <meta content="telephone=no" name="format-detection"> 
+    <title>Online-zapis</title>
+  <style type="text/css">
+    body {
+			width: 100% !important;
+			-webkit-text-size-adjust: 100%;
+			-ms-text-size-adjust: 100%;
+			margin: 0;
+			padding: 0;
+			line-height: 100%;
+		}
+
+		[style*="Open Sans"] {font-family: arial, 'Open Sans', sans-serif !important;}
+
+		img {
+			outline: none;
+			text-decoration: none;
+			border:none;
+			-ms-interpolation-mode: bicubic;
+			max-width: 100%!important;
+			margin: 0;
+			padding: 0;
+		}
+    
+		table td {
+			border-collapse: collapse;
+		}
+    
+		table {
+			border-collapse: collapse;
+			mso-table-lspace: 0pt;
+			mso-table-rspace: 0pt;
+		}
+    a, a:link, a:visited {text-decoration: none; color: #ffffff;}
+    a:hover {text-decoration: underline;}
+    h2,h2 a,h2 a:visited,h3,h3 a,h3 a:visited,h4,h5,h6,.t_cht {color:#2a3042;}
+    .ExternalClass p, .ExternalClass span, .ExternalClass font, .ExternalClass td {line-height: 100%;}
+    .ExternalClass {width: 100%;}
+
+    .action {
+      color: #2a3042;
+      border:#2a3042 1px solid; 
+      font-size: 24px; 
+    }
+    .reschedule {
+      color: #e89d0d;
+      border:#e89d0d 1px solid; 
+    }
+    .deleted {
+      color: #f44336;
+      border:#f44336 1px solid; 
+    }
+    .created {
+      color: #34c38f;
+      border:#34c38f 1px solid; 
+    }
+    .phone {
+      font-size: 16px;
+    }
+    .company-name {
+      font-size: 32px;
+    }
+    .company-name span {
+      font-size: 20px;
+    }
+    .company-name a {
+      font-size: 13px;
+    }
+    .date-time {
+      font-size: 24px;
+    }
+    .summary, .politics {
+      font-size: 24px;
+    }
+    .info {
+      font-size: 20px;
+    }
+    .sphere {
+    background-position: 0 0;
+    background-repeat: no-repeat;
+    background-image: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTIiIGhlaWdodD0iMTIiIHZpZXdCb3g9IjAgMCAxMiAxMiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4NCjxwYXRoIGQ9Ik0xMC4yNDE3IDEuNzU4MzFDNy44OTc1IC0wLjU4NTkxNyA0LjEwMjg4IC0wLjU4NjI5MSAxLjc1ODMyIDEuNzU4MzFDLTAuNTg1OTMxIDQuMTAyNTQgLTAuNTg2MjgzIDcuODk3MTIgMS43NTgzMiAxMC4yNDE3QzQuMTAyNSAxMi41ODU5IDcuODk3MTMgMTIuNTg2MyAxMC4yNDE3IDEwLjI0MTdDMTIuNTg1OSA3Ljg5NzQ3IDEyLjU4NjMgNC4xMDI4OSAxMC4yNDE3IDEuNzU4MzFaTTkuOTkwOTcgOS4zODY2QzkuNzEwNyA5LjEzNTk3IDkuNDEwOSA4LjkxNDE4IDkuMDk0ODkgOC43MjMwNEM5LjMwMzc2IDguMDAxNTQgOS40Mjc1IDcuMjA3NTkgOS40NTY3NSA2LjM4MjI4SDExLjIyMDRDMTEuMTQwNiA3LjQ5NDcyIDEwLjcxMzIgOC41MzgyNyA5Ljk5MDk3IDkuMzg2NlpNMC43Nzk2MTkgNi4zODIyOEgyLjU0MzI0QzIuNTcyNDkgNy4yMDc1OSAyLjY5NjIzIDguMDAxNTQgMi45MDUxIDguNzIzMDRDMi41ODkwOSA4LjkxNDE4IDIuMjg5MjkgOS4xMzU5NyAyLjAwOTAyIDkuMzg2NkMxLjI4Njc5IDguNTM4MjcgMC44NTkzODMgNy40OTQ3MiAwLjc3OTYxOSA2LjM4MjI4Wk0yLjAwOTA0IDIuNjEzNDFDMi4yODkzMSAyLjg2NDA0IDIuNTg5MTEgMy4wODU4MyAyLjkwNTEyIDMuMjc2OTdDMi42OTYyNSAzLjk5ODQ3IDIuNTcyNTEgNC43OTI0MiAyLjU0MzI2IDUuNjE3NzNIMC43Nzk2MTlDMC44NTkzODMgNC41MDUzMSAxLjI4Njc5IDMuNDYxNzcgMi4wMDkwNCAyLjYxMzQxWk01LjYxNzc1IDMuMzU1OTlDNC45OTQzIDMuMzExNCA0LjM5MzE3IDMuMTU3ODQgMy44MzU4OSAyLjkwNDUzQzQuMTYgMi4wNjk5MiA0Ljc1NzQ5IDEuMDY4OSA1LjYxNzc1IDAuODIwODI3VjMuMzU1OTlaTTUuNjE3NzUgNC4xMjE5NVY1LjYxNzc2SDMuMzA4MTFDMy4zMzQ1NyA0LjkxOTYxIDMuNDMzNDkgNC4yNDkyMSAzLjU5OCAzLjYzNTgxQzQuMjMxMzEgMy45MTI2NiA0LjkxMjQxIDQuMDc4IDUuNjE3NzUgNC4xMjE5NVpNNS42MTc3NSA2LjM4MjI4VjcuODc4MDhDNC45MTI0MSA3LjkyMjAzIDQuMjMxMzEgOC4wODczNyAzLjU5OCA4LjM2NDIyQzMuNDMzNDkgNy43NTA4MiAzLjMzNDU3IDcuMDgwNDIgMy4zMDgxMSA2LjM4MjI4SDUuNjE3NzVaTTUuNjE3NzUgOC42NDQwNVYxMS4xNzkyQzQuNzU3NTQgMTAuOTMxMSA0LjE2MDA0IDkuOTMwMjEgMy44MzU4OSA5LjA5NTUxQzQuMzkzMTcgOC44NDIxOSA0Ljk5NDMgOC42ODg2NCA1LjYxNzc1IDguNjQ0MDVaTTYuMzgyMjYgOC42NDQwNUM3LjAwNTcxIDguNjg4NjQgNy42MDY4NCA4Ljg0MjE5IDguMTY0MTIgOS4wOTU1MUM3LjgzOTk5IDkuOTMwMTQgNy4yNDI1MiAxMC45MzExIDYuMzgyMjYgMTEuMTc5MlY4LjY0NDA1Wk02LjM4MjI2IDcuODc4MDhWNi4zODIyOEg4LjY5MTkxQzguNjY1NDQgNy4wODA0MiA4LjU2NjUyIDcuNzUwODIgOC40MDIwMSA4LjM2NDIyQzcuNzY4NyA4LjA4NzM3IDcuMDg3NiA3LjkyMjAzIDYuMzgyMjYgNy44NzgwOFpNNi4zODIyNiA1LjYxNzc2VjQuMTIxOTVDNy4wODc2IDQuMDc4IDcuNzY4NyAzLjkxMjY2IDguNDAyMDEgMy42MzU4MUM4LjU2NjUyIDQuMjQ5MjEgOC42NjU0NCA0LjkxOTYxIDguNjkxOTEgNS42MTc3Nkg2LjM4MjI2Wk02LjM4MjI2IDMuMzU1OTlWMC44MjA4NUM3LjI0MjUyIDEuMDY4OTIgNy44NDAwMSAyLjA2OTk0IDguMTY0MTIgMi45MDQ1NUM3LjYwNjg0IDMuMTU3ODQgNy4wMDU3MSAzLjMxMTQgNi4zODIyNiAzLjM1NTk5Wk04LjA5OTMgMS4yMDI1QzguNTg4NjMgMS40MTY3OCA5LjA0NTE1IDEuNzA3MzMgOS40NTQzOCAyLjA2NzgzQzkuMjU5NTkgMi4yMzk1OCA5LjA1NDA1IDIuMzk1MzIgOC44Mzk0MiAyLjUzNDU5QzguNjQ4ODEgMi4wNjI2NiA4LjQwNTMzIDEuNjA0MDMgOC4wOTkzIDEuMjAyNVpNMy4xNjA1NyAyLjUzNDU5QzIuOTQ1OTQgMi4zOTUzMiAyLjc0MDQyIDIuMjM5NTggMi41NDU2IDIuMDY3ODNDMi45NTQ4NCAxLjcwNzMzIDMuNDExMzYgMS40MTY3OCAzLjkwMDY4IDEuMjAyNUMzLjU5NDY1IDEuNjA0MDggMy4zNTExNyAyLjA2MjcgMy4xNjA1NyAyLjUzNDU5Wk0zLjE2MDU5IDkuNDY1NDVDMy4zNTExNyA5LjkzNzM1IDMuNTk0NyAxMC4zOTYgMy45MDA3MSAxMC43OTc1QzMuNDExMzggMTAuNTgzMyAyLjk1NDg2IDEwLjI5MjcgMi41NDU2MyA5LjkzMjJDMi43NDA0MiA5Ljc2MDQ1IDIuOTQ1OTYgOS42MDQ3MiAzLjE2MDU5IDkuNDY1NDVaTTguODM5NDIgOS40NjU0NUM5LjA1NDA1IDkuNjA0NzIgOS4yNTk1OSA5Ljc2MDQ1IDkuNDU0MzggOS45MzIxOEM5LjA0NTE1IDEwLjI5MjcgOC41ODg2MyAxMC41ODMyIDguMDk5MyAxMC43OTc1QzguNDA1MzEgMTAuMzk2IDguNjQ4ODEgOS45MzczOCA4LjgzOTQyIDkuNDY1NDVaTTkuNDU2NzcgNS42MTc3NkM5LjQyNzUyIDQuNzkyNDUgOS4zMDM3OCAzLjk5ODQ3IDkuMDk0OTEgMy4yNzdDOS40MTA5MiAzLjA4NTg1IDkuNzEwNyAyLjg2NDA2IDkuOTkwOTkgMi42MTM0M0MxMC43MTMyIDMuNDYxNzcgMTEuMTQwNiA0LjUwNTMxIDExLjIyMDQgNS42MTc3Nkg5LjQ1Njc3WiIgZmlsbD0id2hpdGUiLz4NCjwvc3ZnPg0K');
+}
+
+    @media only screen and (max-width:480px) {
+      .phone {
+        font-size: 13px;
+      }
+      .company-name {
+        font-size: 24px;
+      }
+      .company-name span {
+        font-size: 16px;
+      }
+      .company-name a {
+        font-size: 13px;
+      }
+      .action {
+        font-size: 18px; 
+      }
+      .date-time {
+        font-size: 18px;
+      }
+      .summary, .politics {
+        font-size: 18px;
+      }
+      .info {
+        font-size: 16px;
+      }
+      .info span {
+        display: none;
+      }
+
+    }
+    </style>
+  </head> 
+
+<body style="width: 100%; font-family: arial, sans-serif; padding: 0; margin: 0; background-color: #ffffff"> 
+        <table cellspacing="0" cellpadding="0" align="center" style="border-collapse: collapse; border-spacing: 0px; table-layout: fixed; width: 100%; background-color: transparent;"> 
+          <tr> 
+            <td align="center" style="padding: 0; margin:0"> 
+
+              <!-- Main table -->
+              <table cellspacing="0" cellpadding="0" align="center" style="border-collapse: collapse; border-spacing: 0px; background-color: #f2f2f7; max-width: 600px"> 
+
+                <!-- Company -->
+                <tr> 
+                  <td align="left" bgcolor="#2A3042" style="margin:0; padding-top: 30px; padding-left: 30px; padding-right: 28px; padding-bottom: 32px; background-color:#2a3042; border-bottom-right-radius: 50px; border-bottom-left-radius: 50px;">
+                    <table cellspacing="0" cellpadding="0" align="left" style="border-collapse: collapse; border-spacing: 0px; width: 100%;"> 
+                      <tr> 
+                        <td valign="top" align="left" style="padding: 0; margin: 0; width: 60%"> 
+                          <p class="company-name" style="margin: 0; -webkit-text-size-adjust: none; -ms-text-size-adjust: none; font-family: arial, sans-serif; line-height: 32px; font-size: 32px; color: #ffffff; "><b>Dark Eagle Barbershop</b><br>
+                          <span style="line-height: 27px; font-size: 20px; display: block; margin-top: 5px;">Речицкий проспект 5А</span>
+                          <span style="line-height: 18px; display: block; margin-top: 6px;"><a style="color: #ffffff; text-decoration: none; font-size: 13px;" href="#"><img src="img/world.svg" width="12" height="12" style="margin-right: 5px;" alt="call">Посмотреть на карте</a></span>
+                          </p>
+                        </td> 
+                        <td align="center" style="padding: 0; margin: 0; font-size: 0px; width: 2%;"></td> 
+                        <td valign="top" align="right" style="padding: 0; margin: 0; width: 38%;">
+                          <p class="phone" style="margin:0; -webkit-text-size-adjust: none; -ms-text-size-adjust: none; font-family:arial, sans-serif; line-height: 22px; font-size: 16px; color:#ffffff;">
+                            <a style="color: #ffffff; text-decoration: none;" href="tel:+375290000000"><img width="12" height="12" src="img/phone-call.svg" alt="call">&nbsp;+375 29 0000000<br></a>
+                            <a style="color: #ffffff; text-decoration: none;" href="tel:+375290000000"><img width="12" height="12" src="img/phone-call.svg" alt="call">&nbsp;+375 29 0000000</a>
+                          </p>
+                        </td>                 
+                      </tr> 
+                    </table>
+                  </td> 
+                </tr>
+                <!-- Company --> 
+
+                <!-- Action -->
+                <tr>
+                  <td valign="top" align="left" style="padding: 0; padding-left: 30px; padding-right: 30px;">
+                    <table cellspacing="0" cellpadding="0" align="left" style="border-collapse: collapse; border-spacing: 0px; margin-top: 25px; display: block;"> 
+                      <tr>
+                        <td valign="top">
+                          <p class="action reschedule" style="margin: 0; padding-left: 10px; padding-right: 10px; padding-top: 5px; padding-bottom: 5px; line-height: 33px; font-size: 24px; border-radius: 5px; "> Напоминание о записи </p>
+                        </td>
+                      </tr>  
+                      <tr>
+                        <td>
+                          <p class="date-time" style="display: block; line-height: 33px; font-size: 24px; color: #8e919d; padding-top: 5px; padding-bottom: 25px; margin: 0; ">Пятница, 25 марта, 14:30</p>
+                        </td>
+                      </tr>
+                    </table> 
+                  </td> 
+                </tr> 
+                <!-- Action -->
+
+                <!-- Stuff -->
+                <tr>
+                  <td valign="top" align="left" style="padding: 0; padding-left: 30px; padding-right: 30px; width: 100%;">
+                    <table cellspacing="0" cellpadding="0" align="left" style="width: 100%; border-collapse: collapse; border-spacing: 0px;  border-top: 1px solid #dedfe6; border-bottom: 1px solid #dedfe6;">
+                      <tr>
+                        <td style="padding-top: 20px; padding-bottom: 20px; display: flex; align-items: center;">
+                          <img src="img/foto.png" width="70" height="70" alt="Stuff's photo" style="border-radius: 50%; margin-right: 30px;"> <!-- Image from the database -->
+                          <div>
+                            <p style="margin: 0; color: #2a3042; font-size: 20px; line-height: 27px; display: block;" >Екатерина</p> <!-- Name from the database -->
+                            <p style="margin: 0; color: #2a3042; font-size: 20px; line-height: 27px; display: block;" >Светлая</p> <!-- Family name from the database -->
+                          </div>
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+                <!-- Stuff -->
+
+                <!-- Services -->
+                <tr>
+                  <td valign="top" align="left" style="padding: 0; padding-left: 30px; padding-right: 30px; width: 100%;">
+                    <table cellspacing="0" cellpadding="0" align="left" style="border-collapse: collapse; border-spacing: 0px; width: 100%;"> 
+                      <tr> 
+                        <td valign="top" align="left" style="padding: 0; margin: 0; width: 70%; font-size: 16px; line-height: 24px; color: #666b79; padding-top: 30px;"> 
+                          <ul style="list-style-position: outside; margin: 0; padding-left: 20px;"><li>Окрашивание волос (короткие)</li></ul>
+                        </td> 
+                        <td align="center" style="padding: 0; margin: 0; font-size: 0px; width: 2%;"></td> 
+                        <td valign="bottom" align="right" style="padding: 0; margin: 0; width: 28%; font-size: 13px; line-height: 24px; color: #2a3042; font-weight: bold; padding-top: 30px;">
+                          <ul style="margin: 0;"><li style="list-style: none;">32.32 BYN</li></ul>
+                        </td>                 
+                      </tr> 
+                      <tr> 
+                        <td valign="top" align="left" style="padding: 0; margin: 0; width: 70%; font-size: 16px; line-height: 24px; color: #666b79;"> 
+                          <ul style="list-style-position: outside; margin: 0; padding-left: 20px;"><li>Стрижка мужская модельная</li></ul>
+                        </td> 
+                        <td align="center" style="padding: 0; margin: 0; font-size: 0px; width: 2%;"></td> 
+                        <td valign="bottom" align="right" style="padding: 0; margin: 0; width: 28%; font-size: 13px; line-height: 24px; color: #2a3042; font-weight: bold;">
+                          <ul style="margin: 0;"><li style="list-style: none;">32.32 BYN</li></ul>
+                        </td>                 
+                      </tr> 
+                      <tr> 
+                        <td valign="top" align="left" style="padding: 0; margin: 0; width: 70%; font-size: 16px; line-height: 24px; color: #666b79;"> 
+                          <ul style="list-style-position: outside; margin: 0; padding-left: 20px;"><li>Окрашивание волос (короткие)</li></ul>
+                        </td> 
+                        <td align="center" style="padding: 0; margin: 0; font-size: 0px; width: 2%;"></td> 
+                        <td valign="bottom" align="right" style="padding: 0; margin: 0; width: 28%; font-size: 13px; line-height: 24px; color: #2a3042; font-weight: bold;">
+                          <ul style="margin: 0;"><li style="list-style: none;">32.32 BYN</li></ul>
+                        </td>                 
+                      </tr> 
+                      <tr> 
+                        <td valign="top" align="left" style="padding: 0; margin: 0; width: 70%; font-size: 16px; line-height: 24px; color: #666b79; padding-bottom: 22px;"> 
+                          <ul style="list-style-position: outside; margin: 0; padding-left: 20px;"><li>Окрашивание волос очень длинное название (короткие)</li></ul>
+                        </td> 
+                        <td align="center" style="padding: 0; margin: 0; font-size: 0px; width: 2%;"></td> 
+                        <td valign="bottom" align="right" style="padding: 0; margin: 0; width: 28%; font-size: 13px; line-height: 24px; color: #2a3042; font-weight: bold; padding-bottom: 22px;">
+                          <ul style="margin: 0;"><li style="list-style: none;">232.32 BYN</li></ul>
+                          
+                        </td>                 
+                      </tr> 
+                    </table>
+                  </td>
+                </tr>
+                <!-- Services -->
+
+                <!-- Summary -->
+                <tr>
+                  <td valign="top" align="left" style="padding: 0; padding-left: 30px; padding-right: 30px; width: 100%;">
+                    <table cellspacing="0" cellpadding="0" align="left" style="width: 100%; border-collapse: collapse; border-spacing: 0px; border-top: 1px solid #dedfe6; border-bottom: 1px solid #dedfe6;">
+                      <tr>
+                        <td style="padding-top: 30px; padding-bottom: 30px;">
+                          <p class="summary" style="margin: 0; color: #2a3042; font-size: 24px; line-height: 40px; font-weight: bold; " >Итого:</p>
+                        </td>
+                        <td align="right" style="padding-top: 30px; padding-bottom: 30px;">
+                          <p class="summary" style="margin: 0; color: #2a3042; font-size: 24px; line-height: 40px; font-weight: bold; " >320.24 BYN</p>
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+                <!-- Summary -->                
+
+                <!-- Politics -->
+                <tr>
+                  <td valign="top" align="left" style="padding: 0; padding-left: 30px; padding-right: 30px; width: 100%;">
+                    <table cellspacing="0" cellpadding="0" align="left" style="width: 100%; border-collapse: collapse; border-spacing: 0px; ">
+                      <tr>
+                        <td style="padding-top: 30px; padding-bottom: 30px;">
+                          <p class="politics" style="margin: 0; color: #2a3042; font-weight: bold; line-height: 33px; font-size: 24px;" >Политика отмены визита:</p>
+                          <p style="margin: 0; color: #666b79; font-size: 14px; line-height: 19px; margin-top: 5px;" >Отмена записи возможна не познее, чем 12 часов.</p>
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+                <!-- Politics -->                
+
+                <!-- Information link -->
+                <tr>
+                  <td valign="top" align="left" style="padding: 0; padding-left: 30px; padding-right: 30px; width: 100%;">
+                    <table cellspacing="0" cellpadding="0" align="left" style="width: 100%; border-collapse: collapse; border-spacing: 0px; background-color: #2a3042">
+                      <tr>
+                        <td style="padding-top: 21px; padding-bottom: 17px;">
+                          <a href="https://online-zapis.com" target="_blank" style="text-decoration: none;" ><p class="info" style="text-align: center; margin: 0; color: #ffffff; line-height: 27px; font-size: 20px; font-weight: bold;" >Информация о визите &nbsp; <span><img src="img/arrow.svg" width="31" height="15" alt="arrow" ></span></p></a>
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+                <!-- Information link -->                
+
+                <!-- Footer -->
+                <tr>
+                  <td valign="top" align="left" style="padding: 0; padding-left: 30px; padding-right: 30px; width: 100%;">
+                    <table cellspacing="0" cellpadding="0" align="left" style="width: 100%; border-collapse: collapse; border-spacing: 0px; border-top: 1px solid #dedfe6; ">
+                      <tr>
+                        <td style="padding-top: 20px; padding-bottom: 17px;">
+                          <p style="text-align: center; margin: 0; color: #666b79; font-size: 14px; line-height: 19px; margin-top: 5px;" >Это автоматическое письмо, пожалуйста, не отвечайте на него <br> <a href="https://online-zapis.com" target="_blank" style="color: #666b79;">© Online-zapis.com</a></p>
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+                <!-- Footer -->                
+
+
+              </table>
+
+            </td> 
+          </tr> 
+        </table> 
+
+</body>
+</html>
