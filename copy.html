@@ -1,13 +1,25 @@
-<script>
-function copyToClipboard(text){
-    var copytext=document.createElement('input')
-    if(typeof text=='undefined') copytext.value="ВАШ ТЕКСТ"
-    else copytext.value=text
-    document.body.appendChild(copytext)
-    copytext.select()
-    document.execCommand('copy')
-    document.body.removeChild(copytext)
-}
-</script>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+    function copyToClipboard(text){
+        var copytext=document.createElement('input')
+        if(typeof text=='undefined') copytext.value="ВАШ ТЕКСТ"
+        else copytext.value=text
+        document.body.appendChild(copytext)
+        copytext.select()
+        document.execCommand('copy')
+        document.body.removeChild(copytext)
+    }
+    </script>
+</head>
+<body>
+    <button onClick="copyToClipboard()">Скопировать ответ</button>     
+</body>
+</html>
 
-<button onClick="copyToClipboard()">Скопировать ответ</button> 
+
