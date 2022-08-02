@@ -47,7 +47,7 @@
     .action {
       color: #2a3042;
       border:#2a3042 1px solid; 
-      font-size: 24px; 
+      
     }
     .moved {
       color: #e89d0d;
@@ -61,59 +61,39 @@
       color: #34c38f;
       border:#34c38f 1px solid; 
     }
-    .phone {
-      font-size: 16px;
-    }
-    .company-name {
-      font-size: 32px;
-    }
-    .company-name span {
-      font-size: 20px;
-    }
-    .company-name a {
-      font-size: 13px;
-    }
-    .date-time {
-      font-size: 24px;
-    }
-    .summary, .politics {
-      font-size: 24px;
-    }
-    .info {
-      font-size: 20px;
-    }
     .invisible {
       display: none;
     }
+    .mobile {
+     display: none;
+    }
+    .desktop {
+      display: flex; justify-content: center;
+    }
+    .typeact {
+      display: flex; 
+      flex-direction: column; 
+      align-items: left;
+    }
 
     @media only screen and (max-width:480px) {
-      .phone {
-        font-size: 13px;
-      }
-      .company-name {
-        font-size: 24px;
-      }
-      .company-name span {
-        font-size: 16px;
-      }
-      .company-name a {
-        font-size: 13px;
-      }
-      .action {
-        font-size: 18px; 
-      }
-      .date-time {
-        font-size: 18px;
-      }
-      .summary, .politics {
-        font-size: 18px;
-      }
-      .info {
-        font-size: 16px;
-      }
+
       .info span {
         display: none;
       }
+      .mobile {
+        display: flex; justify-content: center;
+      
+    }
+    .desktop {
+      display: none;
+    }
+    .typeact {
+      display: flex; 
+      flex-direction: column; 
+      align-items: center;
+    }
+
 
     }
     </style>
@@ -125,48 +105,48 @@
             <td align="center" style="padding: 0; margin:0"> 
 
               <!-- Main table -->
-              <table cellspacing="0" cellpadding="0" align="center" style="border-collapse: collapse; border-spacing: 0px; background-color: #f2f2f7; max-width: 600px"> 
+              <table cellspacing="0" cellpadding="0" align="center" style="border-collapse: collapse; border-spacing: 0px; background-color: #f2f2f7; max-width: 600px;"> 
 
                 <!-- Company -->
-                <tr> 
-                  <td align="left" bgcolor="#2A3042" style="margin:0; padding-top: 30px; padding-left: 30px; padding-right: 28px; padding-bottom: 32px; background-color:#2a3042; border-bottom-right-radius: 50px; border-bottom-left-radius: 50px;">
-                    <table cellspacing="0" cellpadding="0" align="left" style="border-collapse: collapse; border-spacing: 0px; width: 100%;"> 
+                <tr style="text-align: center;"> 
+                  <td bgcolor="#2A3042" style="margin:0; padding-top: 30px; padding-left: 30px; padding-right: 28px; padding-bottom: 32px; background-color:#2a3042; border-bottom-right-radius: 50px; border-bottom-left-radius: 50px; text-align: center;">
+                    <table class="desktop" cellspacing="0" cellpadding="0" style="border-collapse: collapse; border-spacing: 0px; width: 100%; text-align: center;"> 
                       <tr> 
-                        <td valign="top" align="left" style="padding: 0; margin: 0; width: 60%"> 
-                          <p class="company-name" style="margin: 0; -webkit-text-size-adjust: none; -ms-text-size-adjust: none; font-family: arial, sans-serif; line-height: 32px; font-size: 32px; color: #ffffff; "><b>Dark Eagle Barbershop</b><br>
-                          <span style="line-height: 27px; font-size: 20px; display: block; margin-top: 5px;">Речицкий проспект 5А</span>
-                          <span style="line-height: 18px; display: block; margin-top: 6px;"><a style="color: #ffffff; text-decoration: none; font-size: 13px;" href="#"><img src="img/world.svg" width="12" height="12" style="margin-right: 5px;" alt="call">Посмотреть на карте</a></span>
-                          </p>
+                        <td valign="top" align="left" style="padding: 0; margin: 0; width: 60%;"> 
+                          <p style="margin: 0; -webkit-text-size-adjust: none; -ms-text-size-adjust: none; font-family: arial, sans-serif; line-height: 24px; font-size: 24px; font-weight: 700; color: #ffffff; ">Dark Eagle Barbershop</p>
+                          <p style="line-height: 21px; font-size: 18px; font-weight: 400; display: block; margin-top: 10px; color: #ffffff;">Речицкий проспект 5А</p>
+                          <a style="line-height: 15px; font-size: 13px; display: block; margin-top: 15px; color: #ffffff; text-decoration: underline; font-weight: 400; " href="#"><img src="img/world.svg" width="12" height="12" style="margin-right: 5px;" alt="call">Посмотреть на карте</a>
                         </td> 
-                        <td align="center" style="padding: 0; margin: 0; font-size: 0px; width: 2%;"></td> 
+                        <td style="padding: 0; margin: 0; font-size: 0px; width: 2%;"></td> 
                         <td valign="top" align="right" style="padding: 0; margin: 0; width: 38%;">
-                          <table>
-                            <tr class="phone" style="margin:0; -webkit-text-size-adjust: none; -ms-text-size-adjust: none; font-family:arial, sans-serif; line-height: 22px; font-size: 16px; color:#ffffff;">
-                              <td><a style="color: #ffffff; text-decoration: none;" href="tel:+375290000000"><img width="12" height="12" src="img/phone-call.svg" alt="call">&nbsp;+375 29 0000000</a> </td>
-                            </tr>
-                          </table>
+                          <a style="display: block; color: #ffffff; text-decoration: none; margin-bottom: 10px; line-height: 16px; font-size: 13px; font-weight: 400; " href="tel:+375290000000"><img width="12" height="12" src="img/phone-call.svg" alt="call">&nbsp;+375 29 0000000</a>
+                          <a style="display: block; color: #ffffff; text-decoration: none; margin-bottom: 10px; line-height: 16px; font-size: 13px; font-weight: 400; " href="tel:+375290000000"><img width="12" height="12" src="img/phone-call.svg" alt="call">&nbsp;+375 29 0000000</a> 
                         </td>                 
                       </tr> 
                     </table>
+
+                    <table class="mobile" cellspacing="0" cellpadding="0" style="border-collapse: collapse; border-spacing: 0px; width: 100%; text-align: center;"> 
+                      <tr> 
+                        <td valign="top" style="padding: 0; margin: 0; text-align: center;"> 
+                          <p class="company-name" style="margin: 0; -webkit-text-size-adjust: none; -ms-text-size-adjust: none; font-family: arial, sans-serif; line-height: 24px; font-size: 24px; color: #ffffff; padding-bottom: 20px; font-weight: 700;">Dark Eagle Barbershop</p>
+                          <p style="line-height: 21px; font-size: 18px; margin-top: 10px; color: #ffffff; font-weight: 400;">Речицкий проспект 5А</p>
+                          <p style="line-height: 15px; font-size: 13px; margin-top: 15px;"><a style="color: #ffffff; text-decoration: underline; font-weight: 400;" href="#"><img src="img/world.svg" width="12" height="12" style="margin-right: 5px;" alt="call">Посмотреть на карте</a></p>
+                          <a style="display: block; color: #ffffff; text-decoration: none; margin-top: 10px; line-height: 16px; font-size: 13px;" href="tel:+375290000000"><img width="12" height="12" src="img/phone-call.svg" alt="call">&nbsp;+375 29 0000000</a>
+                          <a style="display: block; color: #ffffff; text-decoration: none; margin-top: 10px; line-height: 16px; font-size: 13px;" href="tel:+375290000000"><img width="12" height="12" src="img/phone-call.svg" alt="call">&nbsp;+375 29 0000000</a> 
+                        </td>                 
+                      </tr> 
+                    </table>
+
+
                   </td> 
                 </tr>
                 <!-- Company --> 
 
                 <!-- Action -->
                 <tr>
-                  <td valign="top" align="left" style="padding: 0; padding-left: 30px; padding-right: 30px;">
-                    <table cellspacing="0" cellpadding="0" align="left" style="border-collapse: collapse; border-spacing: 0px; margin-top: 25px; display: block;"> 
-                      <tr>
-                        <td valign="top">
-                          <p class="action moved" style="margin: 0; padding-left: 10px; padding-right: 10px; padding-top: 5px; padding-bottom: 5px; line-height: 33px; font-size: 24px; border-radius: 5px; width: fit-content;"> Напоминание о записи </p>
-                        </td>
-                      </tr>  
-                      <tr>
-                        <td>
-                          <p class="date-time" style="display: block; line-height: 33px; font-size: 24px; color: #8e919d; padding-top: 5px; padding-bottom: 25px; margin: 0; ">Пятница, 25 марта, 14:30</p>
-                        </td>
-                      </tr>
-                    </table> 
+                  <td class="typeact" valign="top" style="padding: 0; padding-left: 30px; padding-right: 30px; padding-top: 20px;">
+                    <p class="action moved" style="margin: 0; padding-left: 10px; padding-right: 10px; padding-top: 5px; padding-bottom: 5px; line-height: 18px; font-size: 16px; border-radius: 5px; width: fit-content; "> Напоминание о записи </p>
+                    <p class="date-time" style="line-height: 16px; font-size: 14px; color: #8e919d; padding-top: 12px; padding-bottom: 25px; margin: 0;">Пятница, 25 марта, 14:30</p>
                   </td> 
                 </tr> 
                 <!-- Action -->
