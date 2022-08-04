@@ -1,5 +1,5 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" style="font-family: arial, 'Open Sans', sans-serif"> 
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org" style="font-family: arial, 'Open Sans', sans-serif">
   <head> 
     <meta http-equiv="Content-Type" content="text/html charset=UTF-8" />
     <meta content="width=device-width, initial-scale=1" name="viewport"> 
@@ -81,20 +81,9 @@
 
     }
     </style>
-    <script>
-      function copyToClipboard(text){
-        var copytext=document.createElement('input')
-        if(typeof text=='undefined') copytext.value="Pass"
-        else copytext.value=text
-        document.body.appendChild(copytext)
-        copytext.select()
-        document.execCommand('copy')
-        document.body.removeChild(copytext)
-      }
-    </script>
-  </head> 
+  </head>
 
-<body style="width: 100%; font-family: arial, sans-serif; padding: 0; margin: 0; background-color: #E4E6FF"> 
+<body style="width: 100%; font-family: arial, sans-serif; padding: 0; margin: 0; background-color: #E4E6FF">
         <table cellspacing="0" cellpadding="0" align="center" style="border-collapse: collapse; border-spacing: 0px; table-layout: fixed; width: 100%;"> 
           <tr> 
             <td align="center" style="padding: 0; margin:0"> 
@@ -108,14 +97,14 @@
                     <table cellspacing="0" cellpadding="0" align="left" style="border-collapse: collapse; border-spacing: 0px; width: 100%;"> 
                       <tr> 
                         <td valign="center" align="left" style="padding: 0; margin: 0; width: 60%"> 
-                          <p class="company-name" style="margin: 0; -webkit-text-size-adjust: none; -ms-text-size-adjust: none; font-family: arial, sans-serif; line-height: 32px; font-size: 32px; color: #ffffff; "><b>Регистрация компании</b><br> 
-                          <!-- 2) Создание доступа; -->
-                          <!-- 3) Восстановление пароля -->
-                          </p>
+                          <p class="company-name"
+                             style="margin: 0; -webkit-text-size-adjust: none; -ms-text-size-adjust: none;
+                             font-family: arial, sans-serif; line-height: 32px; font-size: 24px; color: #ffffff; ">
+                            <b><span th:text="${title}"></span></b><br></p>
                         </td> 
                         <td align="center" style="padding: 0; margin: 0; font-size: 0px; width: 2%;"></td> 
                         <td valign="top" align="right" style="padding: 0; margin: 0; width: 38%;">
-                          <img src="img/new.png" alt="Picture">
+                          <img th:src="${imgHeader}" alt="Picture">
                         </td>                 
                       </tr> 
                     </table>
@@ -129,14 +118,17 @@
                     <table cellspacing="0" cellpadding="0" align="left" style="border-collapse: collapse; border-spacing: 0px; margin-top: 30px; display: block;"> 
                       <tr>
                         <td valign="top">
-                          <p style="margin: 0; line-height: 33px; font-size: 24px; "> <b> Здравствуйте, <span>SoftMake</span> </b></p> <!-- 2, 3) hello@gmail.com -->
+                          <p style="margin: 0; line-height: 33px; font-size: 18px; ">
+                            <b><span th:text="${textHello}"></span>
+                            <a style="color:#000000;">
+                              <span th:text="${accountName}"></span>
+                            </a>
+                          </b></p> <!-- 2, 3) hello@gmail.com -->
                         </td>
                       </tr>  
                       <tr>
                         <td>
-                          <p style="display: block; line-height: 22px; font-size: 16px; color: #8e919d; padding-top: 10px; padding-bottom: 36px; margin: 0; ">Для Вас создана учетная запись в сервисе Online-zapis.com. Если вы ничего об этом не знаете, пожалуйста, проигнорируйте это письмо.</p>
-                          <!-- 2) Для Вас создана учетная запись в сервисе Online-zapis.com. Если вы ничего об этом не знаете, пожалуйста, проигнорируйте это письмо. -->
-                          <!-- 3) Кто-то запросил сброс пароля для сервиса Online-zapis.com. Если это были не Вы, пожалуйста, проигнорируйте это письмо. -->
+                          <p style="display: block; line-height: 22px; font-size: 16px; color: #8e919d; padding-top: 10px; padding-bottom: 36px; margin: 0; "><span th:text="${msg}"></span></p>
                         </td>
                       </tr>
                     </table> 
@@ -148,37 +140,22 @@
                 <tr>
                   <td valign="top" align="left" style="padding: 0; padding-left: 30px; padding-right: 30px; width: 100%; background-color: #ffffff">
                     <table cellspacing="0" cellpadding="0" align="left" style="width: 100%; border-collapse: collapse; border-spacing: 0px; ">
-                      <tr>
-                        <td style="padding-top: 20px;">
-                          <p style="margin: 0; line-height: 33px; font-size: 18px;"><b>Ваш логин: <span>mzemollc@gmail.com</span></b></p>
-                          <!-- 3) class="invisible" -->
+                      <tr th:class="${invisibleLogin}" >
+                        <td style="padding-top: 20px; display: flex; align-items: center;">
+                          <p style="margin: 0; line-height: 33px; font-size: 18px;"><b><span th:text="${textLogin}"></span>
+                            <a style="color:#000000;"><span th:text="${emailName}"></span></a> </b></p>
                         </td>
                       </tr>
                       <tr>
                         <td style="padding-top: 20px; padding-bottom: 25px;">
-                            <span style="margin: 0; line-height: 33px; font-size: 18px; font-weight: 700;">Ваш пароль:</span>
-                            <!-- 3) Ваш новый пароль: -->
-                            <!-- <button onClick="copyToClipboard()" style="border: none; background-color: #ffffff; font-size: 16px; line-height: 22px; color: #50A5F1; cursor: pointer;">Скопировать</button>  -->
+                          <span style="margin: 0; line-height: 33px; font-size: 18px; font-weight: 700;" th:text="${textPass}"></span>
                         </td>
                       </tr>
                       <tr>
                         <td align="center">
-                          <!-- <div class="numbers" style=""> -->
                             <span style="letter-spacing: 15px; 
-                            font-size: 40px; line-height: 54px; text-align: center; font-weight: 700; border: 1px solid #8e919d; border-radius: 6px; padding-left: 10px; padding-right: 10px;">12345678</span>
-                          <!-- </div> -->
-
-<!--                           <div class="numbers" style="display: flex; justify-content: space-between; margin-bottom: 27px; font-size: 40px; line-height: 54px; text-align: center; font-weight: 700;">
-                            <div style="padding-top: 5px; padding-bottom: 3px; padding-left: 14px; padding-right: 15px; border: 1px solid #8e919d; border-radius: 6px; ">2</div>
-                            <div style="padding-top: 5px; padding-bottom: 3px; padding-left: 14px; padding-right: 15px; border: 1px solid #8e919d; border-radius: 6px; ">5</div>
-                            <div style="padding-top: 5px; padding-bottom: 3px; padding-left: 14px; padding-right: 15px; border: 1px solid #8e919d; border-radius: 6px; ">2</div>
-                            <div style="padding-top: 5px; padding-bottom: 3px; padding-left: 14px; padding-right: 15px; border: 1px solid #8e919d; border-radius: 6px; ">3</div>
-                            <div style="padding-top: 5px; padding-bottom: 3px; padding-left: 14px; padding-right: 15px; border: 1px solid #8e919d; border-radius: 6px; ">5</div>
-                            <div style="padding-top: 5px; padding-bottom: 3px; padding-left: 14px; padding-right: 15px; border: 1px solid #8e919d; border-radius: 6px; ">2</div>
-                            <div style="padding-top: 5px; padding-bottom: 3px; padding-left: 14px; padding-right: 15px; border: 1px solid #8e919d; border-radius: 6px; ">1</div>
-                            <div style="padding-top: 5px; padding-bottom: 3px; padding-left: 14px; padding-right: 15px; border: 1px solid #8e919d; border-radius: 6px; ">9</div>
-                            <div style="padding-top: 5px; padding-bottom: 3px; padding-left: 14px; padding-right: 15px; border: 1px solid #8e919d; border-radius: 6px; ">9</div>
-                          </div> -->
+                            font-size: 40px; line-height: 54px; text-align: center; font-weight: 700; border: 1px solid #8e919d; border-radius: 6px; padding-left: 10px; padding-right: 5px;" th:text="${password}"></span>
+                          </div>
                         </td>
                       </tr>
                     </table>
@@ -186,17 +163,13 @@
                 </tr>
                 <!-- Autorization -->
 
-                               
-
                 <!-- Message -->
-                <tr>
+                <tr th:class="${invisibleDesc}">
                   <td valign="top" align="left" style="padding: 0; padding-left: 30px; padding-right: 30px; width: 100%;  background-color: #ffffff">
                     <table cellspacing="0" cellpadding="0" align="left" style="width: 100%; border-collapse: collapse; border-spacing: 0px; ">
                       <tr>
                         <td style="padding-top: 30px; ">
-                          <p style="margin: 0; color: #666b79; font-size: 16px; line-height: 22px; margin-top: 5px; text-align: center; margin-bottom: 30px;" >Пожалуйста, нажмите кнопку, чтобы активировать аккаунт</p>
-                          <!-- 2) class="invisible" -->
-                          <!-- 3) Пожалуйста, нажмите кнопку, чтобы активировать новый пароль: -->
+                          <p style="margin: 0; color: #666b79; font-size: 16px; line-height: 22px; margin-top: 5px; text-align: center; margin-bottom: 30px;" ><span th:text="${desc}"></span></p>
                         </td>
                       </tr>
                     </table>
@@ -210,9 +183,12 @@
                     <table cellspacing="0" cellpadding="0" align="left" style="width: 100%; border-collapse: collapse; border-spacing: 0px; background-color: #2a3042">
                       <tr>
                         <td style="padding-top: 21px; padding-bottom: 17px;">
-                          <a href="https://online-zapis.com" target="_blank" style="text-decoration: none;" ><p class="info" style="text-align: center; margin: 0; color: #ffffff; line-height: 27px; font-size: 20px; font-weight: bold;" >Активировать аккаунт &nbsp; <span><img src="img/arrow.svg" width="31" height="15" alt="arrow" ></span></p></a>
-                          <!-- 2) Перейти в кабинет" -->
-                          <!-- 3) Активиолвать пароль -->
+                          <a th:href="${link}" target="_blank" style="text-decoration: none;" >
+                            <p class="info" style="text-align: center; margin: 0; color: #ffffff; line-height: 23px; font-size: 20px; font-weight: bold;">
+                              <span th:text="${textButton}"></span>
+                              <span><img th:src="${imgArrow}" width="31" height="15" alt="arrow" ></span>
+                            </p>
+                          </a>
                         </td>
                       </tr>
                     </table>
@@ -226,7 +202,7 @@
                     <table cellspacing="0" cellpadding="0" align="left" style="width: 100%; border-collapse: collapse; border-spacing: 0px; border-top: 1px solid #dedfe6; ">
                       <tr>
                         <td style="padding-top: 20px; padding-bottom: 17px;">
-                          <p style="text-align: center; margin: 0; color: #666b79; font-size: 14px; line-height: 19px; margin-top: 5px;" >Это автоматическое письмо, пожалуйста, не отвечайте на него <br> <a href="https://online-zapis.com" target="_blank" style="color: #666b79;">© Online-zapis.com</a></p>
+                          <p style="text-align: center; margin: 0; color: #666b79; font-size: 14px; line-height: 19px; margin-top: 5px;" ><span th:text="${textFooter}"></span> <br> <a href="https://online-zapis.com" target="_blank" style="color: #666b79;">© Online-zapis.com</a></p>
                         </td>
                       </tr>
                     </table>
@@ -239,7 +215,7 @@
 
             </td> 
           </tr> 
-        </table> 
+        </table>
 
 </body>
 </html>
