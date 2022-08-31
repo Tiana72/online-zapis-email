@@ -1,7 +1,7 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org" style="font-family: arial, 'Open Sans', sans-serif">
 <head>
-    <meta http-equiv="Content-Type" content="text/html charset=UTF-8"/>
+    <meta http-equiv="Content-Type" content="text/html charset=UTF-8" />
     <meta content="width=device-width, initial-scale=1" name="viewport">
     <meta name="x-apple-disable-message-reformatting">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -24,9 +24,9 @@
         img {
             outline: none;
             text-decoration: none;
-            border: none;
+            border:none;
             -ms-interpolation-mode: bicubic;
-            max-width: 100% !important;
+            max-width: 100%!important;
             margin: 0;
             padding: 0;
         }
@@ -60,191 +60,208 @@
 
         .action {
             color: #2a3042;
-            border: #2a3042 1px solid;
-            font-size: 24px;
+            border:#2a3042 1px solid;
         }
 
         .moved {
             color: #e89d0d;
-            border: #e89d0d 1px solid;
+            border:#e89d0d 1px solid;
         }
 
         .deleted {
             color: #f44336;
-            border: #f44336 1px solid;
+            border:#f44336 1px solid;
         }
 
         .created {
             color: #34c38f;
-            border: #34c38f 1px solid;
+            border:#34c38f 1px solid;
         }
 
-        .phone {
-            font-size: 16px;
-        }
-
-        .company-name {
-            font-size: 24px;
-        }
-
-        .company-name span {
-            font-size: 20px;
-        }
-
-        .company-name a {
-            font-size: 13px;
-        }
-
-        .date-time {
-            font-size: 24px;
-        }
-
-        .summary, .politics {
-            font-size: 24px;
-        }
-
-        .info {
-            font-size: 20px;
-        }
         .invisible {
             display: none;
         }
 
-        @media only screen and (max-width: 480px) {
-            .phone {
-                font-size: 13px;
+        .mobile {
+            display: none;
+        }
+
+        .desktop {
+            /* display: flex; justify-content: center; */
+        }
+
+        .activity {
+            text-align: left;
+        }
+        .stuff {
+            line-height: 23px;
+            font-size: 20px;
+        }
+
+        @media only screen and (max-width:480px) {
+
+            .mobile {
+                display: initial;
+                text-align: center;
             }
 
-            .company-name {
-                font-size: 24px;
-            }
-
-            .company-name span {
-                font-size: 16px;
-            }
-
-            .company-name a {
-                font-size: 13px;
-            }
-
-            .action {
-                font-size: 18px;
-            }
-
-            .date-time {
-                font-size: 18px;
-            }
-
-            .summary, .politics {
-                font-size: 18px;
-            }
-
-            .info {
-                font-size: 16px;
-            }
-
-            .info span {
+            .desktop {
                 display: none;
             }
-
+            .activity {
+                text-align: center;
+            }
+            .stuff {
+                line-height: 24px;
+                font-size: 16px;
+            }
         }
     </style>
 </head>
 
+
 <body style="width: 100%; font-family: arial, sans-serif; padding: 0; margin: 0; background-color: #ffffff">
-<table cellspacing="0" cellpadding="0" align="center"
-       style="border-collapse: collapse; border-spacing: 0px; table-layout: fixed; width: 100%; background-color: transparent;">
+
+<table cellspacing="0" cellpadding="0" align="center" style="border-collapse: collapse; border-spacing: 0px; table-layout: fixed;
+width: 100%; background-color: #e4e6ff;">
     <tr>
-        <td align="center" style="padding: 0; margin:0; background-color: #e4e6ff;">
+        <td align="center" style="padding: 0; margin:0">
+            <center style="max-width: 600px; width: 100%">
 
             <!-- Main table -->
-            <table cellspacing="0" cellpadding="0" align="center"
-                   style="border-collapse: collapse; border-spacing: 0px; background-color: #f2f2f7; max-width: 600px">
+            <table cellspacing="0" cellpadding="0" align="center" style="border-collapse: collapse; border-spacing: 0px;
+            background-color: #f2f2f7; max-width: 600px; width: 100%; ">
 
                 <!-- Company -->
-                <tr>
-                    <td align="left" bgcolor="#2A3042"
-                        style="margin:0; padding-top: 15px; padding-left: 30px; padding-right: 28px; padding-bottom: 30px; background-color:#2a3042; border-bottom-right-radius: 50px; border-bottom-left-radius: 50px;">
-                        <table cellspacing="0" cellpadding="0" align="left" style="border-collapse: collapse; border-spacing: 0px; width: 100%;">
-                            <tr>
-                                <td valign="top" align="left" style="padding: 0; margin: 0; width: 60%">
-                                    <p class="company-name" style="margin: 0; font-weight: bold; -webkit-text-size-adjust: none; -ms-text-size-adjust: none; font-family: arial, sans-serif; color: #ffffff; ">
-                                      <span style="font-size: 24px; line-height: 24px;" th:text="${companyName}"></span><br>
-                                        <span style="line-height: 21px; font-size: 18px; display: block; margin-top: 10px; font-weight: 400;" th:text="${companyAddress}"></span>
-                                        <span style="display: block; margin-top: 15px;">
-                                            <a style="color: #ffffff; text-decoration: none; font-size: 13px; line-height: 15px;" href="#">
-                                                <img th:src="${imgMap}" width="12" height="12" style="margin-right: 5px;" alt="map">
-                                                <span style="font-size: 13px; font-weight: 400;" th:text="${textMap}"></span>
-                                            </a>
-                                        </span>
-                                    </p>
-                                </td>
-                                <td align="center" style="padding: 0; margin: 0; font-size: 0px; width: 2%;"></td>
-                                <td valign="top" align="right" style="padding: 0; margin: 0; width: 38%;">
+                <tr style="text-align: center;">
+                    <td bgcolor="#2A3042" style="margin:0; padding-top: 30px; padding-left: 30px; padding-right: 28px; padding-bottom: 32px; background-color:#2a3042; border-bottom-right-radius: 50px; border-bottom-left-radius: 50px; text-align: center;">
+<!--                <center style="max-width: 600px; width: 100%">
+                    <table cellspacing="0" cellpadding="0" style="border-collapse: collapse; border-spacing: 0px; width: 100%;">
+                        <tr>
+                            <td>
+                                <span style="display: inline-block; width: 372px; text-align: left; margin-bottom: 30px">
+                                <p style="margin: 0; -webkit-text-size-adjust: none; -ms-text-size-adjust: none; font-family: arial, sans-serif; line-height: 24px; font-size: 24px; font-weight: 700; color: #ffffff; ">
+                                    <span style="font-size: 24px; line-height: 24px;" th:text="${companyName}"></span>
+                                </p>
+                                <p style="line-height: 21px; font-size: 18px; font-weight: 400; display: block; margin-top: 10px; color: #ffffff;">
+                                    <span style="font-size: 18px; line-height: 21px;" th:text="${companyAddress}"></span>
+                                </p>
+                                <a style="line-height: 15px; font-size: 13px; display: block; margin-top: 15px; color: #ffffff; text-decoration: underline; font-weight: 400; " href="#">
+                                    <img th:src="${imgMap}" width="12" height="12" style="margin-right: 5px;" alt="map">
+                                    <span style="line-height: 15px; font-size: 13px; font-weight: 400;" th:text="${textMap}"></span>
+                                </a>
+                                </span>
+                                <span style="display: inline-block; width: 170px; text-align: right">
+                                <a th:each="phone : ${phones}" style="display: block; color: #ffffff; text-decoration: none; margin-bottom: 5px; line-height: 18px; font-size: 16px; font-weight: 400; " th:href="'tel:' + ${phone}">
+                                <img width="12" height="12" th:src="${imgCall}" alt="call">&nbsp;
+                                    <span style="line-height: 18px; font-size: 16px;" th:text="${phone}"></span>
+                                </a>
+                                </span>
 
-                                    <table width="100%" border="0">
-                                        <tr th:each="phone : ${phones}" align="right" class="phone"
-                                            style="margin:0; -webkit-text-size-adjust: none; -ms-text-size-adjust: none;
-                                            font-family:arial, sans-serif; color:#ffffff;">
-                                            <td>
-                                                <a style="color: #ffffff; text-decoration: none; line-height: 18px; font-size: 16px; " th:href="'tel:' + ${phone}">
-                                                    <img width="12" height="12" th:src="${imgCall}" alt="call">&nbsp;
-                                                    <span style="line-height: 24px; font-size: 16px;" th:text="${phone}"></span>
-                                                </a>
-                                            </td>
-                                        </tr>
-                                    </table>
-                                </td>
-                            </tr>
-                        </table>
-                    </td>
-                </tr>
-                <!-- Company -->
+                            </td>
+                        </tr>
+                    </table>
+                    </center> -->
+
+                    <table class="desktop" cellspacing="0" cellpadding="0" width="100%" style="border-collapse: collapse; border-spacing: 0px; width: 100%;
+                    @media only screen and (max-width:480px) {display: none}">
+                        <tr>
+                            <td valign="top" align="left" style="padding: 0; margin: 0; width: 60%;">
+                                <p style="margin: 0; -webkit-text-size-adjust: none; -ms-text-size-adjust: none; font-family: arial, sans-serif; line-height: 24px; font-size: 24px; font-weight: 700; color: #ffffff; ">
+                                    <span style="font-size: 24px; line-height: 24px;" th:text="${companyName}"></span>
+                                </p>
+                                <p style="line-height: 21px; font-size: 18px; font-weight: 400; display: block; margin-top: 10px; color: #ffffff;">
+                                    <span style="font-size: 18px; line-height: 21px;" th:text="${companyAddress}"></span>
+                                </p>
+                                <a style="line-height: 15px; font-size: 13px; display: block; margin-top: 15px; color: #ffffff; text-decoration: underline; font-weight: 400; " href="#">
+                                    <img th:src="${imgMap}" width="12" height="12" style="margin-right: 5px;" alt="map"><span style="line-height: 15px; font-size: 13px; font-weight: 400;" th:text="${textMap}"></span>
+                                </a>
+                            </td>
+                            <td style="padding: 0; margin: 0; font-size: 0px; width: 2%;"></td>
+                            <td valign="top" align="right" style="padding: 0; margin: 0; width: 38%;">
+                                <a th:each="phone : ${phones}" style="display: block; color: #ffffff; text-decoration: none; margin-bottom: 5px; line-height: 18px; font-size: 16px; font-weight: 400; " th:href="'tel:' + ${phone}">
+                                    <img width="12" height="12" th:src="${imgCall}" alt="call">&nbsp;
+                                    <span style="line-height: 18px; font-size: 16px;" th:text="${phone}"></span>
+                                </a>
+                            </td>
+                        </tr>
+                    </table>
+
+                   <table class="mobile" cellspacing="0" cellpadding="0" width="100%" style="border-collapse: collapse; border-spacing: 0px; width: 100%; display: none;
+                   @media only screen and (max-width:480px) {display: initial}; ">
+                        <tr>
+                            <td valign="top" style="padding: 0; margin: 0; text-align: center;">
+                                <p class="company-name" style="margin: 0; -webkit-text-size-adjust: none; -ms-text-size-adjust: none; font-family: arial, sans-serif; line-height: 24px; font-size: 24px; color: #ffffff; font-weight: 700;">
+                                    <span style="font-size: 24px; line-height: 24px;" th:text="${companyName}"></span>
+                                </p>
+                                <p style="line-height: 21px; font-size: 18px; margin-top: 10px; margin-bottom: 15px; color: #ffffff; font-weight: 400;">
+                                    <span style="line-height: 21px; font-size: 18px; font-weight: 400;" th:text="${companyAddress}"></span>
+                                </p>
+                                <a style="display: block; color: #ffffff; text-decoration: underline; font-weight: 400; line-height: 15px; font-size: 13px; padding-bottom: 20px;" href="#">
+                                    <img th:src="${imgMap}" width="12" height="12" style="margin-right: 5px;" alt="map">
+                                    <span style="font-size: 13px; line-height: 15px; font-weight: 400;" th:text="${textMap}"></span>
+                                </a>
+                                <a th:each="phone : ${phones}" style="display: block; color: #ffffff; text-decoration: none; margin-top: 10px; line-height: 16px; font-size: 13px;" th:href="'tel:' + ${phone}">
+                                    <img width="12" height="12" th:src="${imgCall}" alt="call">&nbsp;
+                                    <span style="line-height: 16px; font-size: 13px;" th:text="${phone}"></span>
+                                </a>
+                            </td>
+                        </tr>
+                    </table>
+
+
+                </td>
+            </tr>
+            <!-- Company -->
 
                 <!-- Action -->
                 <tr>
-                    <td valign="top" align="left" style="padding: 0; padding-left: 30px; padding-right: 30px;">
-                        <table cellspacing="0" cellpadding="0" align="left"
-                               style="border-collapse: collapse; border-spacing: 0px; margin-top: 25px; display: block;">
-                            <tr>
-                                <td valign="top">
-                                    <p th:class="${actionStyle}"
-                                       style="margin: 0; padding-left: 10px; padding-right: 10px; padding-top: 5px;
-                                       padding-bottom: 5px; line-height: 18px; font-size: 16px; border-radius: 5px;
-                                       width: fit-content;">
-                                        <span th:text="${action}"></span></p>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <p class="date-time"
-                                       style="display: block; line-height: 16px; font-size: 14px; color: #8e919d;
-                                       padding-top: 11px; padding-bottom: 20px; margin: 0; ">
-                                        <span th:text="${appointmentTime}"></span></p>
-                                </td>
-                            </tr>
-                        </table>
+                    <td class="activity" valign="top" style="padding: 0; padding-left: 30px; padding-right: 30px; padding-top: 30px;">
+                        <p th:class="${actionStyle}" style="margin: 0; padding-left: 10px; padding-right: 10px; padding-top: 5px;
+                        padding-bottom: 5px; line-height: 18px; font-size: 16px; border-radius: 5px; width: fit-content; display: inline;">
+                            <span style="line-height: 18px; font-size: 16px;" th:text="${action}"></span>
+                        </p>
+                        <p class="date-time" style="line-height: 16px; font-size: 14px; color: #8e919d; padding-top: 17px; padding-bottom: 20px; margin: 0;">
+                            <span style="line-height: 16px; font-size: 14px;" th:text="${appointmentTime}"></span>
+                        </p>
                     </td>
                 </tr>
                 <!-- Action -->
 
                 <!-- Stuff -->
                 <tr>
-                    <td valign="top" align="left" style="padding: 0; padding-left: 30px; padding-right: 30px; width: 100%; padding-bottom: 30px;">
-                        <table cellspacing="0" cellpadding="0" align="left"
-                               style="width: 100%; border-collapse: collapse; border-spacing: 0px;  border-top: 1px solid #dedfe6; border-bottom: 1px solid #dedfe6;">
+                    <td valign="top" align="left" style="padding: 0; padding-left: 30px; padding-right: 30px; width: 100%;">
+                        <table cellspacing="0" cellpadding="0" align="left" style="width: 100%;
+                        border-collapse: collapse; border-spacing: 0px;  border-top: 1px solid #dedfe6;
+                        border-bottom: 1px solid #dedfe6; margin-bottom: 30px;">
                             <tr>
                                 <td style="padding-top: 20px; padding-bottom: 20px; display: flex; align-items: center;">
-                                    <img th:src="${staffPhoto}" width="70" height="70" alt="Stuff's photo" style="border-radius: 50%; margin-right: 30px;">
-                                    <!-- Image from the database -->
-                                    <div>
-                                        <p style="margin: 0; color: #2a3042; font-size: 20px; line-height: 23px; display: block;">
-                                            <span th:text="${staffFirstName}"></span></p>
-                                        <!-- Name from the database -->
-                                        <p style="margin: 0; color: #2a3042; font-size: 20px; line-height: 23px; display: block;">
-                                            <span th:text="${staffLastName}"></span></p>
-                                        <!-- Family name from the database -->
-                                    </div>
+                                    <!--<img th:src="${staffPhoto}" width="70" height="70" alt="Stuff's photo" style="border-radius: 50%; margin-right: 30px;">
+                                    <div style="display: flex; flex-direction: column; justify-content: center;">
+                                        <p class="stuff" style="margin: 0; color: #2a3042; display: block;" >
+                                            <span th:text="${staffFirstName}"></span>
+                                        </p>
+                                        <p class="stuff" style="margin: 0; color: #2a3042; display: block;" >
+                                            <span th:text="${staffLastName}"></span>
+                                        </p>
+                                    </div>-->
+                                    <table>
+                                        <tr>
+                                            <td align="left">
+                                                <img th:src="${staffPhoto}" width="70" height="70" alt="Stuff's photo" style="border-radius: 50%; margin-right: 30px;"> <!-- Image from the database -->
+                                            </td>
+                                            <td align="left" valign="middle">
+                                                <p class="stuff" style="margin: 0; color: #2a3042; display: block;" >
+                                                    <span th:text="${staffFirstName}"></span>
+                                                </p> <!-- Name from the database -->
+                                                <p class="stuff" style="margin: 0; color: #2a3042; display: block;" >
+                                                    <span th:text="${staffLastName}"></span>
+                                                </p> <!-- Family name from the database -->
+
+                                            </td>
+                                        </tr>
+                                    </table>
+
                                 </td>
                             </tr>
                         </table>
@@ -281,15 +298,16 @@
                 <!-- Summary -->
                 <tr>
                     <td valign="top" align="left" style="padding: 0; padding-left: 30px; padding-right: 30px; width: 100%;">
-                        <table cellspacing="0" cellpadding="0" align="left"
-                               style="width: 100%; border-collapse: collapse; border-spacing: 0px; border-top: 1px solid #dedfe6; border-bottom: 1px solid #dedfe6; margin-top: 30px;">
-                            <tr>
-                                <td style="padding-top: 30px; padding-bottom: 30px;">
+                        <table cellspacing="0" cellpadding="0" align="left" width="100%"
+                               style="width: 100%; border-collapse: collapse; border-spacing: 0px; border-top: 1px solid #dedfe6;
+                               border-bottom: 1px solid #dedfe6; margin-top: 30px;">
+                            <tr width="100%">
+                                <td width="50%" style="padding-top: 30px; padding-bottom: 30px;">
                                     <p class="summary" style="margin: 0; color: #2a3042; font-size: 24px; line-height: 24px; font-weight: bold; ">
                                         <span th:text="${textSum}"></span>
                                     </p>
                                 </td>
-                                <td align="right" style="padding-top: 30px; padding-bottom: 30px;">
+                                <td width="50%" align="right" style="padding-top: 30px; padding-bottom: 30px;">
                                     <p class="summary" style="margin: 0; color: #2a3042; font-size: 24px; line-height: 24px; font-weight: bold; ">
                                         <span th:text="${summary} + ' ' + ${currency}"></span>
                                     </p>
@@ -322,13 +340,15 @@
                 <!-- Information link -->
                 <tr th:class="${invisibleStyle}">
                     <td valign="top" align="left" style="padding: 0; padding-left: 30px; padding-right: 30px; width: 100%;">
-                        <table cellspacing="0" cellpadding="0" align="left"
-                               style="width: 100%; border-collapse: collapse; border-spacing: 0px; background-color: #2a3042">
+                        <table cellspacing="0" cellpadding="0" align="left" style="width: 100%; border-collapse: collapse; border-spacing: 0px; background-color: #2a3042">
                             <tr>
                                 <td style="padding-top: 21px; padding-bottom: 17px;">
-                                    <a th:href="${viewVisit}" target="_blank" style="text-decoration: none;"><p class="info" style="text-align: center; margin: 0; color: #ffffff; line-height: 27px; font-size: 20px; font-weight: bold;">
-                                        <span th:text="${buttonText}"></span>
-                                        <span><img th:src="${imgArrow} " width="31" height="15" alt="arrow"></span></p></a>
+                                    <a th:href="${viewVisit}" target="_blank" style="text-decoration: none;" >
+                                        <p class="info" style="text-align: center; margin: 0; color: #ffffff; line-height: 23px; font-size: 20px; font-weight: bold;" >
+                                            <span th:text="${buttonText}"></span>
+                                            <span><img th:src="${imgArrow}" width="31" height="15" alt="arrow" ></span>
+                                        </p>
+                                    </a>
                                 </td>
                             </tr>
                         </table>
@@ -339,14 +359,13 @@
                 <!-- Footer -->
                 <tr>
                     <td valign="top" align="left" style="padding: 0; padding-left: 30px; padding-right: 30px; width: 100%;">
-                        <table cellspacing="0" cellpadding="0" align="left"
-                               style="width: 100%; border-collapse: collapse; border-spacing: 0px; border-top: 1px solid #dedfe6; ">
+                        <table cellspacing="0" cellpadding="0" align="left" style="width: 100%; border-collapse: collapse; border-spacing: 0px; border-top: 1px solid #dedfe6; ">
                             <tr>
                                 <td style="padding-top: 20px; padding-bottom: 17px;">
-                                    <p style="text-align: center; margin: 0; color: #666b79; font-size: 14px; line-height: 16px;">
-                                        <span th:text="${footerText}"></span>
-                                         <br> <a href="https://online-zapis.com" target="_blank"
-                                         style="color: #666b79;">Â© Online-zapis.com</a></p>
+                                    <p style="text-align: center; margin: 0; color: #666b79; font-size: 14px; line-height: 16px;" >
+                                        <span th:text="${footerText}"></span> <br>
+                                        <a href="https://online-zapis.com" target="_blank" style="color: #666b79;">© Online-zapis.com</a>
+                                    </p>
                                 </td>
                             </tr>
                         </table>
@@ -356,7 +375,7 @@
 
 
             </table>
-
+        </center>
         </td>
     </tr>
 </table>

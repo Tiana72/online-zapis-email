@@ -1,0 +1,241 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org" style="font-family: arial, 'Open Sans', sans-serif">
+<head>
+    <meta http-equiv="Content-Type" content="text/html charset=UTF-8" />
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <meta name="x-apple-disable-message-reformatting">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta content="telephone=no" name="format-detection">
+    <title>Online-zapis</title>
+    <style type="text/css">
+        body {
+            width: 100% !important;
+            -webkit-text-size-adjust: 100%;
+            -ms-text-size-adjust: 100%;
+            margin: 0;
+            padding: 0;
+            line-height: 100%;
+        }
+
+        [style*="Open Sans"] {
+            font-family: arial, 'Open Sans', sans-serif !important;
+        }
+
+        img {
+            outline: none;
+            text-decoration: none;
+            border:none;
+            -ms-interpolation-mode: bicubic;
+            max-width: 100%!important;
+            margin: 0;
+            padding: 0;
+        }
+
+        table td {
+            border-collapse: collapse;
+        }
+
+        table {
+            border-collapse: collapse;
+            mso-table-lspace: 0pt;
+            mso-table-rspace: 0pt;
+        }
+
+        a, a:link, a:visited {
+            text-decoration: none;
+            color: #ffffff;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .ExternalClass p, .ExternalClass span, .ExternalClass font, .ExternalClass td {
+            line-height: 100%;
+        }
+
+        .ExternalClass {
+            width: 100%;
+        }
+
+        .action {
+            color: #2a3042;
+            border:#2a3042 1px solid;
+        }
+
+        .moved {
+            color: #e89d0d;
+            border:#e89d0d 1px solid;
+        }
+
+        .deleted {
+            color: #f44336;
+            border:#f44336 1px solid;
+        }
+
+        .created {
+            color: #34c38f;
+            border:#34c38f 1px solid;
+        }
+
+        .invisible {
+            display: none;
+        }
+
+        .mobile {
+            display: none;
+        }
+
+        .desktop {
+            /* display: flex; justify-content: center; */
+        }
+
+        .activity {
+            text-align: left;
+        }
+        .stuff {
+            line-height: 23px;
+            font-size: 20px;
+        }
+
+        @media only screen and (max-width:480px) {
+
+            .mobile {
+                display: initial;
+                text-align: center;
+            }
+
+            .desktop {
+                display: none;
+            }
+            .activity {
+                text-align: center;
+            }
+            .stuff {
+                line-height: 24px;
+                font-size: 16px;
+            }
+        }
+    </style>
+</head>
+
+
+<body style="width: 100%; font-family: arial, sans-serif; padding: 0; margin: 0; background-color: #ffffff">
+
+  <table cellspacing="0" cellpadding="0" align="center" style="border-collapse: collapse; border-spacing: 0px; table-layout: fixed; width: 100%; background-color: #e4e6ff;">
+    <tr>
+      <td align="center" style="padding: 0; margin:0">
+        <center style="max-width: 600px; width: 100%">
+
+          <!-- Main table -->
+          <table cellspacing="0" cellpadding="0" align="center" style="border-collapse: collapse; border-spacing: 0px;
+          background-color: #f2f2f7; max-width: 600px; width: 100%; ">
+
+              <!-- Company -->
+              <tr style="text-align: center;">
+                  <td bgcolor="#2A3042" style="margin:0; padding-top: 30px; padding-left: 30px; padding-right: 28px; padding-bottom: 32px; background-color:#2a3042; border-bottom-right-radius: 50px; border-bottom-left-radius: 50px; text-align: center;">
+
+                      <table class="desktop" cellspacing="0" cellpadding="0" width="100%" style="border-collapse: collapse; border-spacing: 0px; width: 100%;
+                      @media only screen and (max-width:480px) {display: none}">
+                          <tr>
+                              <td valign="top" align="left" style="padding: 0; margin: 0; width: 60%;">
+                                  <p style="margin: 0; -webkit-text-size-adjust: none; -ms-text-size-adjust: none; font-family: arial, sans-serif; line-height: 24px; font-size: 24px; font-weight: 700; color: #ffffff; ">
+                                      <span style="font-size: 24px; line-height: 24px;" th:text="${companyName}"></span>
+                                  </p>
+                                  <p style="line-height: 21px; font-size: 18px; font-weight: 400; display: block; margin-top: 10px; color: #ffffff;">
+                                      <span style="font-size: 18px; line-height: 21px;" th:text="${companyAddress}"></span>
+                                  </p>
+                                  <a style="line-height: 15px; font-size: 13px; display: block; margin-top: 15px; color: #ffffff; text-decoration: underline; font-weight: 400; " href="#">
+                                      <img th:src="${imgMap}" width="12" height="12" style="margin-right: 5px;" alt="map"><span style="line-height: 15px; font-size: 13px; font-weight: 400;" th:text="${textMap}"></span>
+                                  </a>
+                              </td>
+                              <td style="padding: 0; margin: 0; font-size: 0px; width: 2%;"></td>
+                              <td valign="top" align="right" style="padding: 0; margin: 0; width: 38%;">
+                                  <a th:each="phone : ${phones}" style="display: block; color: #ffffff; text-decoration: none; margin-bottom: 5px; line-height: 18px; font-size: 16px; font-weight: 400; " th:href="'tel:' + ${phone}">
+                                      <img width="12" height="12" th:src="${imgCall}" alt="call">&nbsp;
+                                      <span style="line-height: 18px; font-size: 16px;" th:text="${phone}"></span>
+                                  </a>
+                              </td>
+                          </tr>
+                      </table>
+
+                      <table class="mobile" cellspacing="0" cellpadding="0" width="100%" style="border-collapse: collapse; border-spacing: 0px; width: 100%; display: none;
+                      @media only screen and (max-width:480px) {display: initial}; ">
+                          <tr>
+                              <td valign="top" style="padding: 0; margin: 0; text-align: center;">
+                                  <p class="company-name" style="margin: 0; -webkit-text-size-adjust: none; -ms-text-size-adjust: none; font-family: arial, sans-serif; line-height: 24px; font-size: 24px; color: #ffffff; font-weight: 700;">
+                                      <span style="font-size: 24px; line-height: 24px;" th:text="${companyName}"></span>
+                                  </p>
+                                  <p style="line-height: 21px; font-size: 18px; margin-top: 10px; margin-bottom: 15px; color: #ffffff; font-weight: 400;">
+                                      <span style="line-height: 21px; font-size: 18px; font-weight: 400;" th:text="${companyAddress}"></span>
+                                  </p>
+                                  <a style="display: block; color: #ffffff; text-decoration: underline; font-weight: 400; line-height: 15px; font-size: 13px; padding-bottom: 20px;" href="#">
+                                      <img th:src="${imgMap}" width="12" height="12" style="margin-right: 5px;" alt="map">
+                                      <span style="font-size: 13px; line-height: 15px; font-weight: 400;" th:text="${textMap}"></span>
+                                  </a>
+                                  <a th:each="phone : ${phones}" style="display: block; color: #ffffff; text-decoration: none; margin-top: 10px; line-height: 16px; font-size: 13px;" th:href="'tel:' + ${phone}">
+                                      <img width="12" height="12" th:src="${imgCall}" alt="call">&nbsp;
+                                      <span style="line-height: 16px; font-size: 13px;" th:text="${phone}"></span>
+                                  </a>
+                              </td>
+                          </tr>
+                      </table>
+
+
+                  </td>
+              </tr>
+              <!-- Company -->
+
+              <!-- Warning -->
+              <tr th:class="${invisibleStyle}">
+                <td valign="top" align="left" style="padding: 0; padding-left: 30px; padding-right: 30px; width: 100%;">
+                    <table cellspacing="0" cellpadding="0" align="left" style="width: 100%; border-collapse: collapse; border-spacing: 0px; ">
+                        <tr>
+                            <td style="padding-top: 30px; padding-bottom: 60px;">
+                              <p style="margin: 0; line-height: 28px; font-size: 24px; font-weight: bold; color: #2A3042; margin-bottom: 15px;">
+                                <span th:text="${warningHello}">Здравствуйте, компания</span> 
+                                <span th:text="${accountName}">Company Name</span>
+                              </p>
+                              <p style="margin: 0; color: #666b79; font-size: 16px; line-height: 18.4px; max-width: 430px;">
+                                  <span th:text="${warningText}">CRM Online-zapis.com не оплачена. Приостановка действия через </span>
+                                  <span style="font-weight: bold; color: #2A3042;" th:text="${warningQty}">1&nbsp;день</span>.
+                              </p><br />
+                              <p style="margin: 0; color: #666b79; font-size: 16px; line-height: 18.4px; max-width: 430px;">
+                                <span th:text="${invitationText1}">Пожалуйста, перейдите в раздел </span>
+                                <a th:href="${invitationLink}" target="_blank" style="text-decoration: underline; font-weight: bold; color: #2A3042;" >«Оплата»</a>
+                                <span th:text="${invitationText1}">для последующей оплаты</span>.
+                              </p>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <!-- Warning -->
+            
+
+              <!-- Footer -->
+              <tr>
+                  <td valign="top" align="left" style="padding: 0; padding-left: 30px; padding-right: 30px; width: 100%;">
+                      <table cellspacing="0" cellpadding="0" align="left" style="width: 100%; border-collapse: collapse; border-spacing: 0px; border-top: 1px solid #dedfe6; ">
+                          <tr>
+                              <td style="padding-top: 20px; padding-bottom: 17px;">
+                                  <p style="text-align: center; margin: 0; color: #666b79; font-size: 14px; line-height: 16px;" >
+                                      <span th:text="${footerText}"></span> <br>
+                                      <a href="https://online-zapis.com" target="_blank" style="color: #666b79;">© Online-zapis.com</a>
+                                  </p>
+                              </td>
+                          </tr>
+                      </table>
+                  </td>
+              </tr>
+              <!-- Footer -->
+
+
+          </table>
+        </center>
+      </td>
+    </tr>
+</table>
+
+</body>
+</html>
